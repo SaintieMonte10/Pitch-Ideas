@@ -1,0 +1,5 @@
+Hello {{user.username}}
+
+Welcome to Pitch Ideas Application.
+Thanks for signing up to keep in touch with Pitch Ideas. We're so happy you're here.
+Feel free to drop a pitch on the different categories available.

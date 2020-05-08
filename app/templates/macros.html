@@ -1,19 +1,39 @@
-<!-- Displaying movie list macro  -->
-{% macro displayMovieList(movie_list) %}
-
-    {% for movie in movie_list %}
-
-
-    {% endfor %}
-
+{% macro displayPitches(pitches) %}
+{% for pitch in pitches %}
+<div class="col-md-12 pitch_list">
+  {% if pitch.user.profile_pic_path %}
+  <p>
+    <img src="{{url_for('static',filename = pitch.user.profile_pic_path)}}" alt="" class="img-thumbnail">
+    <h5>Username:<strong>{{pitch.user.username|capitalize}}</strong></h5>
+  </p>
+  {% else %}
+  <p>
+    <img src="{{url_for('static',filename = 'photos/Avatar.png')}}" alt="" class="img-thumbnail">
+    <h5>Username: <strong>{{pitch.user.username|capitalize}}</strong></h5>
+  </p>
+  {% endif %}
+  <h5>{{pitch.pitch_content}}</h5>
+  <h5><strong>Category: </strong>{{pitch.pitch_category}}</h5>
+  <p class="btn btn-success comment"><a href="/comments/{{pitch.id}}">Comments</a></p>
+</div>
+{% endfor %}
 {% endmacro %}
 
-<!-- Displaying reviews macro -->
-{% macro displayReviews(review_list) %}
-
-    {% for review in review_list %}
-
-
-    {% endfor %}
-
-{% endmacro %}
+{% macro displayComments(comments_list)%}
+{% for comment in comments_list%}
+<div class="container-fluid">
+  <div class="card style-card">
+    <div class="card-header ">
+      <h4>Pitch Comments</h4>
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{comment.comment_content}}</p>
+        <footer class="blockquote-footer cmm">Comments By <cite
+            title="Source Title"><strong>{{comment.user.username|capitalize}}</strong></cite></footer>
+      </blockquote>
+    </div>
+  </div>
+</div>
+{% endfor%}
+{% endmacro%}
