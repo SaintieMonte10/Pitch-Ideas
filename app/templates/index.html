@@ -1,17 +1,29 @@
 {% extends 'base.html' %}
+{% import 'macros.html' as macro %}
 {% block content%}
 <html>
-    <body class="home">
+
+<head>
+    <link rel="stylesheet" href="/static/index.css">
+
+</head>
+
+<body class="home">
     <div class="container-fluid ">
         <div class="row">
             <div class="col-md-12">
                 <h1 class="text-center">Welcome to Pitch Ideas</h1><br>
                 <h2 class="text-center">Home of the most Innovative & Revolutionary Ideas</h2>
-                <h2 class="text-center"> *Create an Account to Pitch your Ideas* </h2>     
+                <h2 class="text-center"> *Create an Account to Pitch your Ideas* </h2>
             </div>
         </div>
-    </div>  
-    </body>
+        {{macro.displayPitches(pitches)}}
+
+    </div>
+
+    <img src="https://img.icons8.com/ios/24/000000/facebook-new.png" />
+</body>
+
 </html>
 
 {% endblock%}

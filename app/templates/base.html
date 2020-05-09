@@ -1,15 +1,39 @@
 {% extends 'bootstrap/base.html'%}
-<!-- Navbar block  --> 
+<!-- Navbar block  -->
 {% block navbar %}
-    {% include 'navbar.html' %}
+{% include 'navbar.html' %}
 {% endblock %}
 
 {% block styles %}
-    {{ super()}}
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Righteous" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{{ super()}}
+<link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/particles.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+
+
+<style>
+    .home {
+        background-image: url("https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?cs=srgb&dl=photo-of-dried-lava-983200.jpg&fm=jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        /* padding: 10%; */
+    }
+    .navbar navbar-inverse{
+        position: fixed;
+    }
+
+    
+</style>
 {% endblock%}

@@ -14,6 +14,12 @@
   {% endif %}
   <h5>{{pitch.pitch_content}}</h5>
   <h5><strong>Category: </strong>{{pitch.pitch_category}}</h5>
+  <a href="/"><button class="btn btn-primary">Like</button></a>
+  <!-- <h1>{{upvotes}}</h1> -->
+  <a href="/"><button class="btn btn-danger">Dislike</button></a>
+  <!-- <i class="fa fa-thumbs-up fa-2x" style="font-size:36px;color:lightblue" aria-hidden="true" (click)=likebuttonclick()></i>
+  <i class="fa fa-thumbs-down ml-5" style="font-size:36px;color:red" aria-hidden="true"
+    (click)=dislikebuttonclick()></i> -->
   <p class="btn btn-success comment"><a href="/comments/{{pitch.id}}">Comments</a></p>
 </div>
 {% endfor %}
