@@ -14,10 +14,23 @@
 <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
 <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/particles.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
 
 
@@ -25,15 +38,27 @@
     .home {
         background-image: url("https://images.pexels.com/photos/983200/pexels-photo-983200.jpeg?cs=srgb&dl=photo-of-dried-lava-983200.jpg&fm=jpg");
         background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         color: white;
-        /* padding: 10%; */
     }
-    .navbar navbar-inverse{
+
+    h1 {
+        color: white;
+    }
+
+    .navbar navbar-inverse {
         position: fixed;
     }
 
-    
+    /* .form {
+        position: relative;
+        z-index: 1;
+        opacity: 0.8;
+        max-width: 360px;
+        margin: 0 auto 100px;
+        padding: 45px;
+        text-align: center;
+        height: 330px;
+        border-radius: 14px;
+    } */
 </style>
 {% endblock%}

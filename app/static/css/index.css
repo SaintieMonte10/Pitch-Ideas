@@ -1,8 +1,8 @@
-h1{
+/* h1{
     font-family: 'Righteous', cursive;
     font-size: 80px;
     color:black;
-}
+} */
 
 h3{
     font-family: 'Righteous', cursive;
@@ -39,6 +39,8 @@ h2{
   margin: 5px;
   border-radius: 7px;
   border: 2px dotted #008080;
+  background-color: wheat;
+  color: #000;
 }
 .comment{
   margin-bottom: 5px;
